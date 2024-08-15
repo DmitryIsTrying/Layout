@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-type ContainerText = {
+type ContainerTextPropsType = {
   colorTheme: Themes;
 };
 
@@ -9,7 +9,7 @@ type Themes = {
   colorTextP: string;
 };
 
-export const ContainerText = styled.div<ContainerText>`
+export const ContainerText = styled.div<ContainerTextPropsType>`
   min-width: 160px;
   margin: 20px 10px 12px;
   text-align: left;
