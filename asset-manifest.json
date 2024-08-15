@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/DmitryIsTrying/Layout/static/css/main.31d6cfe0.css",
+    "main.js": "/DmitryIsTrying/Layout/static/js/main.c297a607.js",
+    "static/js/787.215ec985.chunk.js": "/DmitryIsTrying/Layout/static/js/787.215ec985.chunk.js",
+    "static/media/desert.webp": "/DmitryIsTrying/Layout/static/media/desert.e4615b23fb552c4d64e2.webp",
+    "index.html": "/DmitryIsTrying/Layout/index.html",
+    "main.c297a607.js.map": "/DmitryIsTrying/Layout/static/js/main.c297a607.js.map",
+    "787.215ec985.chunk.js.map": "/DmitryIsTrying/Layout/static/js/787.215ec985.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.c297a607.js"
+  ]
+}
