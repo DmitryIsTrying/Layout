@@ -12,10 +12,7 @@ type Themes = {
   colorHoverShadow: string;
 };
 
-export const StyledBtn = styled.button.attrs<StyledBtnPropsType>((props) => ({
-  as: "a",
-  href: props.nonActive ? "#noWork" : "#Work",
-}))<StyledBtnPropsType>`
+export const StyledBtn = styled.a<StyledBtnPropsType>`
   text-decoration: none;
   background-color: ${(props) => props.colorTheme.colorBtn};
   color: ${(props) => props.colorTheme.colorTextBtn};
@@ -34,9 +31,16 @@ export const StyledBtn = styled.button.attrs<StyledBtnPropsType>((props) => ({
 
   ${(props) =>
     props.nonActive &&
-    css<StyledBtnPropsType>`
+    css`
       cursor: not-allowed;
+
+      img {
+      }
     `}
+
+  &:hover {
+    box-shadow: 0px 0px 6px 3px ${(props) => props.colorTheme.colorHoverShadow};
+  }
 
   &:last-of-type {
     background-color: transparent;
@@ -46,9 +50,5 @@ export const StyledBtn = styled.button.attrs<StyledBtnPropsType>((props) => ({
       box-shadow: 0px 0px 6px 3px ${(props) => props.colorTheme.colorShadow}
         inset;
     }
-  }
-  &:hover {
-    box-shadow: 0px 0px 6px 3px ${(props) => props.colorTheme.colorHoverShadow}
-      inset;
   }
 `;

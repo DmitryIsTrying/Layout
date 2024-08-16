@@ -21,20 +21,15 @@ function App() {
 
 export default App;
 
-const ContainerBig = styled.span`
+const ContainerBig = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
   justify-items: center;
   row-gap: 4vw;
-  padding: 3% 0;
+  column-gap: 30px;
+  padding: 3%;
 
-  @media ${layoutsTheme.media.laptop} {
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 10vw;
-    padding: 8% 0;
-  }
-
-  @media ${layoutsTheme.media.tablet} {
+  /* @media ${layoutsTheme.media.tablet} {
     grid-template-columns: repeat(2, 1fr);
     row-gap: 15vw;
     padding: 12% 0;
@@ -44,5 +39,5 @@ const ContainerBig = styled.span`
     grid-template-columns: repeat(1, 1fr);
     row-gap: 20vw;
     padding: 20% 0;
-  }
+  } */
 `;

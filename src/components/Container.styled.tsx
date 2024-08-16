@@ -9,7 +9,6 @@ type Themes = {
 };
 
 export const Container = styled.div<ContainerPropsType>`
-  max-width: 280px;
   padding: 10px;
   border-radius: 15px;
   background-color: ${(props) => props.colorTheme.colorBack};
