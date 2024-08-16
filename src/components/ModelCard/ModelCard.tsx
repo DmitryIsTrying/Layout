@@ -32,7 +32,9 @@ export const ModelCard = (props: ModelCardPropsType) => {
           <StyledBtn nonActive colorTheme={props.colorTheme}>
             See more
           </StyledBtn>
-          <StyledBtn colorTheme={props.colorTheme}>Save</StyledBtn>
+          <StyledBtn thisLink colorTheme={props.colorTheme}>
+            Save
+          </StyledBtn>
         </ContainerBtn>
       </ContainerText>
     </Container>

@@ -3,6 +3,7 @@ import { css, styled } from "styled-components";
 type StyledBtnPropsType = {
   colorTheme: Themes;
   nonActive?: boolean;
+  thisLink?: boolean;
 };
 
 type Themes = {
@@ -13,7 +14,7 @@ type Themes = {
 };
 
 export const StyledBtn = styled.button.attrs<StyledBtnPropsType>((props) => ({
-  as: "a",
+  as: props.thisLink ? "a" : "button",
   href: props.nonActive ? "#noWork" : "#Work",
 }))<StyledBtnPropsType>`
   text-decoration: none;
