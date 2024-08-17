@@ -27,7 +27,12 @@ export const StyledBtn = styled.a<StyledBtnPropsType>`
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: 0.5s;
+  @media (hover: hover) {
+    transition: 0.5s;
+  }
+  @media (hover: none) {
+    transition: 0.1s;
+  }
 
   ${(props) =>
     props.nonActive &&
@@ -37,18 +42,34 @@ export const StyledBtn = styled.a<StyledBtnPropsType>`
       img {
       }
     `}
-
-  &:hover {
-    box-shadow: 0px 0px 6px 3px ${(props) => props.colorTheme.colorHoverShadow};
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 0px 0px 6px 3px
+        ${(props) => props.colorTheme.colorHoverShadow};
+    }
+  }
+  @media (hover: none) {
+    &:active {
+      box-shadow: 0px 0px 6px 3px
+        ${(props) => props.colorTheme.colorHoverShadow};
+    }
   }
 
   &:last-of-type {
     background-color: transparent;
     border: 2px solid ${(props) => props.colorTheme.colorBtn};
     color: ${(props) => props.colorTheme?.colorBtn};
-    &:hover {
-      box-shadow: 0px 0px 6px 3px ${(props) => props.colorTheme.colorShadow}
-        inset;
+    @media (hover: hover) {
+      &:hover {
+        box-shadow: 0px 0px 6px 3px ${(props) => props.colorTheme.colorShadow}
+          inset;
+      }
+    }
+    @media (hover: none) {
+      &:active {
+        box-shadow: 0px 0px 6px 3px ${(props) => props.colorTheme.colorShadow}
+          inset;
+      }
     }
   }
 `;
