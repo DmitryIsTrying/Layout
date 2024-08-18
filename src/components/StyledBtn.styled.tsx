@@ -38,9 +38,6 @@ export const StyledBtn = styled.a<StyledBtnPropsType>`
     props.nonActive &&
     css`
       cursor: not-allowed;
-
-      img {
-      }
     `}
   @media (hover: hover) {
     &:hover {
